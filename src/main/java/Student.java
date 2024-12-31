@@ -36,5 +36,6 @@ class Student {
                 ", name='" + name + '\'' +
                 ", major='" + major + '\'' +
                 '}';
+//        return String.format("Student{id= %d, name= %s, major= %s", id, name, major);
     }
 }

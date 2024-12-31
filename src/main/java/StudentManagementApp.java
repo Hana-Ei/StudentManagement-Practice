@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class StudentManagementApp {
     public static void main(String[] args) {
-        StudentRepositoryImpl repository = new StudentRepositoryImpl();
+    	StudentRepository repository = new StudentRepositoryImpl(); //부모가 인터페이스이기에, 업캐스팅 아님!!!!
+//    	StudentRepositoryImpl repository = new StudentRepositoryImpl(); // 문제는 없음. 다만 의존관계 역전 원칙에 위배된다.
         StudentView view = new StudentView();
         StudentController controller = new StudentController(repository, view);
 
